@@ -53,9 +53,9 @@ jobs:
         with:
           version: 10
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: latest
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           # ✅ 修复：缓存路径指向 docs/
           cache-dependency-path: docs/pnpm-lock.yaml

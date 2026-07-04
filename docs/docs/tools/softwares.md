@@ -12,9 +12,8 @@ sidebar_position: 4
 
 ## 浏览器
 
-- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge/download)
-  - 广告拦截插件：[uBlock Origin](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak)
-- [Firefox 火狐浏览器](https://www.mozilla.org/zh-CN/firefox/browsers/windows-64-bit/)
+- [Firefox（火狐）](https://www.mozilla.org/zh-CN/firefox/browsers/windows-64-bit/)
+- [Tabbit](https://www.tabbit.com/)
 
 ## 办公软件
 
