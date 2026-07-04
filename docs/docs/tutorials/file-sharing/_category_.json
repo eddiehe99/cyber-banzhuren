@@ -3,7 +3,7 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "slug": "file-sharing",
+    "slug": "tutorials/file-sharing",
     "description": "在教室访问共享文件夹，读取教师电脑上的教学文件，如课件、作业等。"
   }
 }

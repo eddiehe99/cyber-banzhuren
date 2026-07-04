@@ -20,20 +20,20 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: '解放双脚',
+    title: '解放双手',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        努力让流程一次跑通。
+        局域网中的 U 盘可以轮休了。
       </>
     ),
   },
   {
-    title: '解放双手',
+    title: '解放双脚',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        局域网中的 U 盘可以休息了。
+        努力让流程一次跑通。
       </>
     ),
   },

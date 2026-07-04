@@ -3,7 +3,7 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "slug": "remote-desktop",
+    "slug": "tutorials/remote-desktop",
     "description": "Windows 内置的功能，局域网内可使用。"
   }
 }
