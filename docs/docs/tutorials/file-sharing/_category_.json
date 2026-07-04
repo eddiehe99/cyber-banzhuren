@@ -1,0 +1,9 @@
+{
+  "label": "配置文件共享",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "file-sharing",
+    "description": "在教室使用通过共享文件夹，连接教师电脑，读取教学文件，如课件、作业等。"
+  }
+}

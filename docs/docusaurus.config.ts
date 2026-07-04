@@ -22,7 +22,11 @@ const config: Config = {
   projectName: 'banzhuren-notifier', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn', // or 'throw', or 'ignore'
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -38,6 +42,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          exclude: ['**/bat/**', '**/feishu-docs/**'],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:

@@ -1,0 +1,9 @@
+{
+  "label": "配置网络",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "lan",
+    "description": "解决学校网络频繁断连问题。"
+  }
+}
