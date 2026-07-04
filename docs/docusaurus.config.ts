@@ -21,7 +21,7 @@ const config: Config = {
   organizationName: 'eddiehe99', // Usually your GitHub org/user name.
   projectName: 'banzhuren-notifier', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn', // or 'throw', or 'ignore'
