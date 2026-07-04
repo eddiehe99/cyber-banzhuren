@@ -6,12 +6,12 @@ const docusaurusVersion = require('@docusaurus/core/package.json').version;
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Banzhuren Notifier',
+  title: 'Cyber Banzhuren',
   // tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://banzhuren-notifier.eddiehe.top',
+  url: 'https://cyber-banzhuren.eddiehe.top',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -19,7 +19,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'eddiehe99', // Usually your GitHub org/user name.
-  projectName: 'banzhuren-notifier', // Usually your repo name.
+  projectName: 'cyber-banzhuren', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   markdown: {
@@ -46,7 +46,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/eddiehe99/banzhuren-notifier/docs',
+            'https://github.com/eddiehe99/cyber-banzhuren/docs',
         },
         blog: {
           showReadingTime: true,
@@ -59,7 +59,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/eddiehe99/banzhuren-notifier/docs',
+            'https://github.com/eddiehe99/cyber-banzhuren/docs',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -77,13 +77,13 @@ const config: Config = {
     metadata: [
       { name: 'author', content: 'Eddie He' },
       { name: 'icon', content: 'img/favicon.ico' },
-      { name: 'keywords', content: 'banzhuren，班主任，通知传递，家长留言搬运' },
-      { name: 'description', content: '用于自动传递班主任通知，以及自动搬运家长留言。' },
+      { name: 'keywords', content: 'banzhuren，班主任' },
+      { name: 'description', content: '您的赛博班主任工具集。' },
       { name: 'copyright', content: '© 2025 Eddie He' },
-      { property: 'og:description', content: '用于自动传递班主任通知，以及自动搬运家长留言。' },
+      { property: 'og:description', content: '您的赛博班主任工具集。' },
       { property: 'og:image', content: 'img/docusaurus-social-card.jpg' },
-      { property: 'og:url', content: 'https://banzhuren-notifier.eddiehe.top' },
-      { name: 'twitter:description', content: '用于自动传递班主任通知，以及自动搬运家长留言。' },
+      { property: 'og:url', content: 'https://cyber-banzhuren.eddiehe.top' },
+      { name: 'twitter:description', content: '您的赛博班主任工具集。' },
       { name: 'twitter:image', content: 'img/docusaurus-social-card.jpg' },
       { name: 'twitter:site', content: '@eddiehe99' },
       { name: 'twitter:card', content: 'img/docusaurus-social-card.jpg' },
@@ -111,7 +111,7 @@ const config: Config = {
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/eddiehe99/banzhuren-notifier',
+          href: 'https://github.com/eddiehe99/cyber-banzhuren',
           label: 'GitHub',
           position: 'right',
         },
@@ -134,19 +134,6 @@ const config: Config = {
             {
               label: 'Blog',
               to: '/blog',
-            },
-          ],
-        },
-        {
-          title: '联系',
-          items: [
-            {
-              label: '开发人员',
-              to: '/blog/authors/eddie',
-            },
-            {
-              label: '邮件地址',
-              href: 'mailto:eddie.he@foxmail.com',
             },
           ],
         },

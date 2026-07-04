@@ -34,8 +34,8 @@ export default function Home(): ReactNode {
   return (
     <Layout
       // title={`${siteConfig.title}`}
-      title="班主任通知助手"
-      description="用于自动传递班主任通知，自动搬运家长留言。">
+      title="Cyber Banzhuren"
+      description="赛博班主任工具集。">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
