@@ -10,6 +10,15 @@ updates:
     schedule:
       interval: "monthly"
 
+    # 添加以下配置开启自动合并
+    enable-auto-merge: true
+    
+    # 推荐：精细化控制，只自动合并小版本和补丁更新
+    # 如果你不加下面这段，所有更新（包括 major）都会尝试自动合并
+    allow-auto-merge:
+      - dependency-name: "*"
+        update-types: ["minor", "patch"]
+
   # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
     # Workflow files stored in the default location of `.github/workflows`
@@ -17,3 +26,4 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    enable-auto-merge: true

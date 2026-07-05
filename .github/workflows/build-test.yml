@@ -1,28 +1,22 @@
-name: Deploy to GitHub Pages
+name: Build Test
 
 on:
-  push:
+  pull_request:
     branches:
       - main
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
-    paths:
-      - 'docs/**'
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build Docusaurus
+  build-test:
+    name: Build Test
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: docs  # 所有步骤默认在 docs/ 目录执行
-
     steps:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-
+      
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -61,32 +55,7 @@ jobs:
           cache-dependency-path: docs/pnpm-lock.yaml
 
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: ${{ steps.detect-package-manager.outputs.manager }} install --frozen-lockfile
 
-      - name: Build website
-        run: ${{ steps.detect-package-manager.outputs.runner }} run build
-
-      - name: Upload Build Artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: docs/build
-
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+      - name: Test build website
+        run: ${{ steps.detect-package-manager.outputs.manager }} build
