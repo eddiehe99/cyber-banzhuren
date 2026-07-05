@@ -9,15 +9,11 @@ updates:
     directory: "/docs" # Location of docs/package.json
     schedule:
       interval: "monthly"
-
-    # 添加以下配置开启自动合并
-    enable-auto-merge: true
-    
-    # 推荐：精细化控制，只自动合并小版本和补丁更新
-    # 如果你不加下面这段，所有更新（包括 major）都会尝试自动合并
-    allow-auto-merge:
-      - dependency-name: "*"
-        update-types: ["minor", "patch"]
+    allow:
+      - update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
+          - "version-update:semver-major"
 
   # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
@@ -26,4 +22,3 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-    enable-auto-merge: true
