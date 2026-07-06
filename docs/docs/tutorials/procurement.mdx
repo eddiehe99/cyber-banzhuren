@@ -128,17 +128,17 @@ graph LR;
 
 ```mermaid
 sequenceDiagram
-    participant 财务 as Liu Weiling （西教学楼一楼财务室）
-    participant 教师 as 教师
-    participant 领导 as 领导
+    participant Teacher as 教师
+    participant Accountant as Liu Weiling （西教学楼一楼财务室）
+    participant Chair as 领导
 
-    教师->>财务: 1. 带申报表、验收表、发票
-    财务-->>教师: 2. 发放“支出凭单”
-    教师->>教师: 3. 填写凭单
-    教师->>教师: 4. 签名(经手人)
-    教师->>领导: 5. 提交凭单请领导签字
-    领导->>教师: 6. 签名(“证明人”、“领导批准”)
-    教师->>财务: 7. 将全部材料交给财务
+    Teacher->>Accountant: 1. 带申报表、验收表、发票
+    Accountant-->>Teacher: 2. 发放“支出凭单”
+    Teacher->>Teacher: 3. 填写凭单
+    Teacher->>Teacher: 4. 签名(经手人)
+    Teacher->>Chair: 5. 提交凭单请领导签字
+    Chair->>Teacher: 6. 签名(“证明人”、“领导批准”)
+    Teacher->>Accountant: 7. 将全部材料交给财务
 ```
 
 ### 报销单张发票
