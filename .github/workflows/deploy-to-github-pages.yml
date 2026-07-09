@@ -59,6 +59,8 @@ jobs:
           # 修复：缓存路径指向 docs/
           cache-dependency-path: docs/pnpm-lock.yaml
 
+      # NOTE: In CI environments (GitHub Actions sets CI=true automatically),
+      # pnpm defaults to `--frozen-lockfile`
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
