@@ -26,20 +26,19 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          # 修复后（检查 docs/ 目录）：
           if [ -f "pnpm-lock.yaml" ]; then
-              echo "manager=pnpm" >> $GITHUB_OUTPUT
+              echo "manager=pnpm --frozen-lockfile --prefer-offline" >> $GITHUB_OUTPUT
               echo "command=install" >> $GITHUB_OUTPUT
               echo "runner=pnpm" >> $GITHUB_OUTPUT
               exit 0
           elif [ -f "yarn.lock" ]; then
-            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "manager=yarn --prefer-offline --no-audit" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
             exit 0
           elif [ -f "package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
-            echo "command=ci" >> $GITHUB_OUTPUT
+            echo "command=ci --prefer-offline --no-audit" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
             exit 0
           else
