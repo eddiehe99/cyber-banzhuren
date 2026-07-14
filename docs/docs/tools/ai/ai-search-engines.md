@@ -1,7 +1,7 @@
 ---
 slug: ai-search-engines
 description: AI 搜索引擎集合。
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # AI 搜索引擎

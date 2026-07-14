@@ -1,7 +1,7 @@
 ---
 slug: chinese-llms
 description: 中文大模型集合。
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # 中文大模型
