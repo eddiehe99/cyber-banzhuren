@@ -1,8 +1,10 @@
 ---
-sidebar_position: 6
+slug: description
+description: 结课资料与评选方案。
+sidebar_position: 1
 ---
 
-# 校本课程（dgscpzx）
+# 说明
 
 ## 校本课程结课资料
 
