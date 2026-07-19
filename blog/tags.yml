@@ -17,3 +17,18 @@
   label: 维护
   permalink: /maintenance
   description: 维护相关 blog
+
+绩效工资:
+  label: 绩效工资
+  permalink: /performance-pay
+  description: 绩效工资相关 blog
+
+班级管理:
+  label: 班级管理
+  permalink: /class-management
+  description: 班级管理相关 blog
+
+学科教学:
+  label: 学科教学
+  permalink: /subject-teaching
+  description: 学科教学相关 blog
