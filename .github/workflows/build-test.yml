@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: docs  # 所有步骤默认在 docs/ 目录执行
+        working-directory: .  # Docusaurus is now at repo root
         
     steps:
       - uses: actions/checkout@v7
@@ -24,7 +24,7 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          # 修复后（检查 docs/ 目录）：
+          # 检查根目录 package manager：
           if [ -f "pnpm-lock.yaml" ]; then
               echo "manager=pnpm" >> $GITHUB_OUTPUT
               echo "command=install --prefer-offline" >> $GITHUB_OUTPUT
@@ -55,8 +55,8 @@ jobs:
         with:
           node-version: latest
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          # 修复：缓存路径指向 docs/
-          cache-dependency-path: docs/pnpm-lock.yaml
+          # 缓存路径指向根目录 pnpm-lock.yaml
+          cache-dependency-path: pnpm-lock.yaml
 
       # NOTE: In CI environments (GitHub Actions sets CI=true automatically),
       # pnpm defaults to `--frozen-lockfile`

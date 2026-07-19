@@ -6,8 +6,18 @@ on:
       - main
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+    # Trigger on any push to main since Docusaurus is now at repo root
     paths:
       - 'docs/**'
+      - 'src/components/**'
+      - 'src/css/**'
+      - 'src/pages/**'
+      - 'src/data/**'
+      - 'static/**'
+      - 'blog/**'
+      - 'docusaurus.config.ts'
+      - 'sidebars.ts'
+      - 'package.json'
   workflow_dispatch:
 
 jobs:
@@ -16,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: docs  # 所有步骤默认在 docs/ 目录执行
+        working-directory: .  # Docusaurus is now at repo root
 
     steps:
       - uses: actions/checkout@v7
@@ -56,8 +66,8 @@ jobs:
         with:
           node-version: latest
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          # 修复：缓存路径指向 docs/
-          cache-dependency-path: docs/pnpm-lock.yaml
+          # 缓存路径指向根目录 pnpm-lock.yaml
+          cache-dependency-path: pnpm-lock.yaml
 
       # NOTE: In CI environments (GitHub Actions sets CI=true automatically),
       # pnpm defaults to `--frozen-lockfile`
@@ -70,7 +80,7 @@ jobs:
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: docs/build
+          path: build
 
   deploy:
     name: Deploy to GitHub Pages
